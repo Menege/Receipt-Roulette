@@ -1,0 +1,48 @@
+{
+  "name": "@receipt-roulette/backend",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Ruslan Efremov <efrerus@gmail.com>",
+  "homepage": "https://github.com/Menege/Receipt-Roulette#readme",
+  "license": "ISC",
+  "main": "lib/backend.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Menege/Receipt-Roulette.git"
+  },
+  "scripts": {
+    "start": "node src/index.ts",
+    "start:dev": "ts-node src/index.ts",
+    "dev": "nodemon --watch 'src/**/*.ts' --exec ts-node src/index.ts",
+    "build": "tsc",
+    "start:prod": "node dist/index.js",
+    "test": "node ./__tests__/@receipt-roulette/backend.test.js",
+    "generate-recipes": "ts-node src/generateRecipes.ts"
+  },
+  "bugs": {
+    "url": "https://github.com/Menege/Receipt-Roulette/issues"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.3.0",
+    "@fastify/cors": "^10.0.2",
+    "fastify": "^5.2.0",
+    "fastify-postgres": "^3.7.0",
+    "nodemon": "^3.1.9",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
