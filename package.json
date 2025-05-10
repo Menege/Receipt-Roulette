@@ -1,0 +1,20 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "lerna run dev --stream",
+    "build": "npx lerna run build"
+  },
+  "dependencies": {
+    "@fastify/swagger": "^9.4.0",
+    "@fastify/swagger-ui": "^5.2.0",
+    "@prisma/client": "^6.1.0",
+    "fastify-cors": "^6.1.0"
+  },
+  "devDependencies": {
+    "lerna": "^8.1.8"
+  }
+}
